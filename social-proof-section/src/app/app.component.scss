@@ -1,0 +1,237 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+$colors: (
+  primary: hsl(300, 43%, 22%),
+  secondary: hsl(303, 10%, 53%),
+  pink: hsl(333, 80%, 67%),
+  grey: hsl(300, 24%, 96%)
+);
+// retrieve color from $colors map ie. `color(primary, base)`
+@function color($color-name) {
+  // map inception
+  @return map-get($colors, $color-name);
+}
+
+.container {
+  width: auto;
+  max-width: 100vw;
+  padding: 7em 2em 0;
+  overflow-x: hidden;
+  @include xl {
+    padding: 7em 10em 0;
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 50px;
+  }
+
+  #intro {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+
+    h1 {
+      color: color(primary);
+      // font-size: 3em;
+      margin-bottom: 0;
+      margin-top: 0;
+      @include xl {
+        font-size: 3em;
+      }
+    }
+
+    p {
+      color: color(secondary);
+      font-weight: 400;
+      line-height: 1.7;
+    }
+    @include xl {
+      text-align: left;
+    }
+  }
+
+  #ratings {
+    margin: 4em 0;
+    @include xl {
+      margin: 0;
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+
+    .rating {
+      background-color: color(grey);
+      padding: 1em 2em;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      color: color(primary);
+      font-weight: 700;
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      svg {
+        width: 18px;
+        height: 16px;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        @include xl {
+          margin-bottom: 0;
+
+          &:last-of-type {
+            margin-right: 2em;
+          }
+        }
+      }
+      @include xl {
+        flex-direction: row;
+        width: calc(100% - 100px);
+
+        span {
+          display: inline-block;
+        }
+
+        &:nth-child(2) {
+          margin-left: 50px;
+        }
+
+        &:nth-child(3) {
+          margin-left: 100px;
+        }
+      }
+    }
+  }
+
+  #reviews {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    @include xl {
+      display: inline-grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+    }
+
+    .review {
+      background-color: color(primary);
+      padding: 3em 2em;
+      border-radius: 10px;
+      color: white;
+      max-height: 250px;
+      position: relative;
+      margin-top: 20px;
+
+      @include xl {
+        &:nth-child(2) {
+          margin-top: 20px;
+        }
+
+        &:nth-child(3) {
+          margin-top: 40px;
+        }
+      }
+
+      > div {
+        height: 40px;
+        // display: flex;
+        // align-items: center;
+        display: grid;
+        grid-template-columns: 40px auto;
+        grid-gap: 2em;
+        margin-bottom: 2em;
+
+        img {
+          width: 100%;
+          border-radius: 100%;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .name {
+            font-weight: 700;
+          }
+
+          .status {
+            display: block;
+            color: color(pink);
+          }
+        }
+      }
+    }
+  }
+
+  #attribution {
+    margin-top: 2em;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  .desktop {
+    display: none;
+  }
+  @include xl {
+    .mobile {
+      display: none;
+    }
+
+    .desktop {
+      display: block;
+    }
+  }
+
+  img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
