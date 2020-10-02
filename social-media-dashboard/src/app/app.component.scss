@@ -1,0 +1,148 @@
+@import "shared/variables";
+@import "shared/breakpoint";
+
+#app {
+  background-color: var(--bg);
+  transition: all 0.15s;
+
+  .tobbar {
+    padding: 2em 1.5em 6em;
+    width: auto;
+    font-weight: 700;
+    background-color: var(--top-bg);
+    color: var(--primary);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    @include md {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3em 7vw 10vw;
+    }
+    @include xl {
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+
+    .title {
+      h1 {
+        color: var(--secondary);
+        margin: 0 0 0.2em;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 2em;
+        @include md {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .toolbox {
+      width: 100%;
+      padding-top: 1.2em;
+      border-top: 1px solid var(--primary);
+      min-height: calc(25px + 1.2em);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include md {
+        width: auto;
+        border-top: 0;
+        // display: block;
+        > span {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .container {
+    padding: 0 1.5em 2em;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    top: -3.5em;
+    position: relative;
+    color: var(--primary);
+    @include md {
+      top: -3em;
+      padding-left: 7vw;
+      padding-right: 7vw;
+    }
+    @include xl {
+      top: -6em;
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+
+    .large-card-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include sm {
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 2em 50px;
+
+        > * {
+          margin-bottom: 0;
+        }
+      }
+      @include xl {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0 50px;
+      }
+
+      > * {
+        margin-bottom: 2em;
+      }
+    }
+
+    .small-card-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      > * {
+        margin-bottom: 2em;
+      }
+      @include sm {
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 2em 50px;
+
+        > * {
+          margin-bottom: 0;
+        }
+      }
+      @include xl {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2em 50px;
+      }
+    }
+  }
+
+  footer {
+    padding: 2em 1.5em;
+    width: auto;
+    font-weight: 700;
+    background-color: var(--top-bg);
+    color: var(--primary);
+    @include xl {
+      padding: 3em 10vh 3em 10vw;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+}

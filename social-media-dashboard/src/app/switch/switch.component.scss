@@ -1,0 +1,69 @@
+@import "../shared/variables";
+
+$toggle-background-on: color(dark, switch-bg);
+$toggle-background-off: var(--switch-bg);
+$toggle-control-color-on: color(dark, top-bg);
+$toggle-control-color-off: var(--top-bg);
+$toggle-width: 50px;
+$toggle-height: 25px;
+$toggle-gutter: 5px;
+$toggle-radius: 50%;
+$toggle-control-speed: .15s;
+$toggle-control-ease: ease-in;
+
+$toggle-radius: $toggle-height / 2;
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: $toggle-width;
+  margin-bottom: $toggle-height;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .control {
+    background: $toggle-background-on;
+
+    &:after {
+      left: $toggle-gutter;
+      background: $toggle-control-color-on;
+    }
+  }
+
+  .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $toggle-height;
+    width: $toggle-width;
+    border-radius: $toggle-radius;
+    background: $toggle-background-off;
+    transition: background $toggle-control-speed $toggle-control-ease;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: $toggle-width - $toggle-control-size - $toggle-gutter;
+      top: $toggle-gutter;
+      width: $toggle-control-size;
+      height: $toggle-control-size;
+      border-radius: $toggle-radius;
+      background: $toggle-control-color-off;
+      transition: left $toggle-control-speed $toggle-control-ease;
+    }
+  }
+
+  .control:hover {
+    background: $toggle-background-on;
+  }
+}

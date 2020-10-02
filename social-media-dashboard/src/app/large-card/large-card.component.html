@@ -1,0 +1,13 @@
+<div [class]="'card card-large card-' + social">
+  <div class="card-content">
+    <span class="profile">
+      <app-icon [icon]="social"></app-icon> {{name}}
+    </span>
+    <span class="number">{{value}}</span>
+    <span class="label">{{label}}</span>
+    <span [class]="'grow grow-' + growDirection">
+      <span *ngIf="growDirection == 'up'" class="caret"></span>
+      <span *ngIf="growDirection == 'down'" class="caret down"></span>
+      {{grow}}</span>
+  </div>
+</div>
