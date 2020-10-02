@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-You can use the [editor on GitHub](https://github.com/zaosoula/frontend-mentor-projects/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/zaosoula/json-identity">
+    <h3 align="center">Frontend Mentor Project</h3>
+  </a>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+  <p align="center">
+  Here is my integration of some of the challenges available on <a href="https://www.frontendmentor.io/">Frontend Mentor</a>
+    <br />
+    <br />
+    <a href="https://www.frontendmentor.io/profile/zaosoula">My profile on Frontend Mentor</a>
+    <br />
+    <br />
+  </p>
+</p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<!-- ABOUT THE PROJECTS -->
+## Projects
 
-```markdown
-Syntax highlighted code block
+Those website are built with Angular.
+* Social media dashboard with theme switcher: [Demo](https://social-media-dashboard-liard-omega.vercel.app/) ([see on Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-side-using-angular-css-grids-and-flexbox-dYm13ZfZr))
+* Social proof section: [Demo](https://social-proof-section-zaosoula.vercel.app/) ([see on Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-side-using-angular-css-grids-and-flexbox-JWXIVYUux))
 
-# Header 1
-## Header 2
-### Header 3
+<!-- LICENSE -->
+## License
 
-- Bulleted
-- List
+Distributed under the MIT License. See `LICENSE` for more information.
 
-1. Numbered
-2. List
+<!-- CONTACT -->
+## Contact
 
-**Bold** and _Italic_ and `Code` text
+Zao Soula — contact@zaosoula.fr
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zaosoula/frontend-mentor-projects/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[license-shield]: https://img.shields.io/github/license/zaosoula/json-identity.svg?style=flat-square
+[license-url]: https://github.com/zaosoula/json-identity/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/zaosoula
