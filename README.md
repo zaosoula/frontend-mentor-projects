@@ -22,7 +22,7 @@
 <!-- ABOUT THE PROJECTS -->
 ## Projects
 
-Those website are built with Angular.
+Those websites are built with Angular.
 * Social media dashboard with theme switcher: [Demo](https://social-media-dashboard-liard-omega.vercel.app/) ([see on Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-side-using-angular-css-grids-and-flexbox-dYm13ZfZr))
 * Social proof section: [Demo](https://social-proof-section-zaosoula.vercel.app/) ([see on Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-side-using-angular-css-grids-and-flexbox-JWXIVYUux))
 
